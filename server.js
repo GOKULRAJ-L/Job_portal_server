@@ -9,6 +9,7 @@ import connectCd from "./config/Cloudinary.js";
 import jobroutes from './routes/jobRoutes.js'
 import userRoutes from './routes/UserRoutes.js'
 import { clerkMiddleware } from '@clerk/express'
+import { clerkWebhooks } from "./controller/Webhhook.js";
 
 
 //Intialization
@@ -25,6 +26,7 @@ app.use(express.json())
 app.use('/recuriter',companyRouter)
 app.use('/public',jobroutes)
 app.use('/user',userRoutes)
+app.use('/webhook',clerkWebhooks)
 
 
 
