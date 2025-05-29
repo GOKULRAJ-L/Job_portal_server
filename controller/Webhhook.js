@@ -1,5 +1,5 @@
 import { Webhook } from "svix";
-import User from "../models/UserSchema";
+import User from "../models/UserSchema.js";
 
 export const clerkWebhooks = async(req,res)=>{
     try{
@@ -44,7 +44,7 @@ export const clerkWebhooks = async(req,res)=>{
                 await User.findByIdAndDelete(data.id)
                 break;
 
-                
+
             default:
                 console.log('Unhandled event type:', type);
         }
