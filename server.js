@@ -26,7 +26,7 @@ app.use(express.json())
 app.use('/recuriter',companyRouter)
 app.use('/public',jobroutes)
 app.use('/user',userRoutes)
-app.use('/webhook',clerkWebhooks)
+app.use('/webhooks',clerkWebhooks)
 
 
 
