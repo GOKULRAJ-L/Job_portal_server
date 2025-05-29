@@ -31,7 +31,7 @@ app.use('/user',userRoutes)
 
 // routes
 app.get('/',(req,res)=>{
-    res.send('Hello world')
+    res.send('Job Portal API is running')
 })
 
 
